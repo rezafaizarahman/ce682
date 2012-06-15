@@ -1,0 +1,7 @@
+########################################################
+    # /etc/udev/rules.d/99-haier-ce682.rules
+    #
+    # Smart Haier CE682 (EVDO)
+    #
+    SUBSYSTEM=="usb", SYSFS{idVendor}=="201e",
+    SYSFS{idProduct}=="1022", RUN+="/usr/sbin/usb_modeswitch –default-vendor 0X201e –default-product 0X1022 –message-content 5553424312345678c00000008000069f030000000000000000000000000000"
